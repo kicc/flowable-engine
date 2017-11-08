@@ -119,11 +119,11 @@ public class DatabaseConfiguration {
 
         } else {
 
-            String dataSourceDriver = env.getProperty("datasource.driver", "org.h2.Driver");
-            String dataSourceUrl = env.getProperty("datasource.url", "jdbc:h2:mem:flowable;DB_CLOSE_DELAY=-1");
+            String dataSourceDriver = env.getProperty("datasource.driver", "com.mysql.jdbc.Driver");
+            String dataSourceUrl = env.getProperty("datasource.url", "jdbc:mysql://127.0.0.1:3306/flowable?characterEncoding=UTF-8");
 
-            String dataSourceUsername = env.getProperty("datasource.username", "sa");
-            String dataSourcePassword = env.getProperty("datasource.password", "");
+            String dataSourceUsername = env.getProperty("datasource.username", "flowable");
+            String dataSourcePassword = env.getProperty("datasource.password", "flowable");
 
             Integer minPoolSize = env.getProperty("datasource.min-pool-size", Integer.class);
             if (minPoolSize == null) {

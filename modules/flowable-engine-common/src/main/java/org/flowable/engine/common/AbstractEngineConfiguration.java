@@ -94,10 +94,10 @@ public abstract class AbstractEngineConfiguration {
     public static final String DB_SCHEMA_UPDATE_TRUE = "true";
 
     protected String databaseType;
-    protected String jdbcDriver = "org.h2.Driver";
-    protected String jdbcUrl = "jdbc:h2:tcp://localhost/~/flowable";
-    protected String jdbcUsername = "sa";
-    protected String jdbcPassword = "";
+    protected String jdbcDriver = "com.mysql.jdbc.Driver";
+    protected String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/flowable?characterEncoding=UTF-8";
+    protected String jdbcUsername = "flowalbe";
+    protected String jdbcPassword = "flowable";
     protected String dataSourceJndiName;
     protected int jdbcMaxActiveConnections;
     protected int jdbcMaxIdleConnections;

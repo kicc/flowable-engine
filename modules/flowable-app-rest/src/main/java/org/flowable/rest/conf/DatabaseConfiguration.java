@@ -37,8 +37,8 @@ public class DatabaseConfiguration {
     @Bean
     public DataSource dataSource() {
 
-        String jdbcUrl = environment.getProperty("datasource.url", "jdbc:h2:mem:flowable;DB_CLOSE_DELAY=1000");
-        String jdbcDriver = environment.getProperty("datasource.driver", "org.h2.Driver");
+        String jdbcUrl = environment.getProperty("datasource.url", "jdbc:mysql://127.0.0.1:3306/flowable?characterEncoding=UTF-8");
+        String jdbcDriver = environment.getProperty("datasource.driver", "com.mysql.jdbc.Driver");
         String jdbcUsername = environment.getProperty("datasource.username", "sa");
         String jdbcPassword = environment.getProperty("datasource.password", "");
 
